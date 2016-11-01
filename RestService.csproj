@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F6F1F13E-0599-43B2-B60A-50DAEDB08A0F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RestService</RootNamespace>
+    <AssemblyName>RestService</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddMaterialForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMaterialForm.Designer.cs">
+      <DependentUpon>AddMaterialForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttendanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceForm.Designer.cs">
+      <DependentUpon>AttendanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CasherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CasherForm.Designer.cs">
+      <DependentUpon>CasherForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClerkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClerkForm.Designer.cs">
+      <DependentUpon>ClerkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CookForm.Designer.cs">
+      <DependentUpon>CookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DBConnection.cs" />
+    <Compile Include="DelDishForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DelDishForm.Designer.cs">
+      <DependentUpon>DelDishForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteCardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteCardForm.Designer.cs">
+      <DependentUpon>DeleteCardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteDishForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteDishForm.Designer.cs">
+      <DependentUpon>DeleteDishForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteFacilityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteFacilityForm.Designer.cs">
+      <DependentUpon>DeleteFacilityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteMaterialForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteMaterialForm.Designer.cs">
+      <DependentUpon>DeleteMaterialForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteReportForm.Designer.cs">
+      <DependentUpon>DeleteReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetailedDishForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailedDishForm.Designer.cs">
+      <DependentUpon>DetailedDishForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DishForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DishForm.Designer.cs">
+      <DependentUpon>DishForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DismissForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DismissForm.Designer.cs">
+      <DependentUpon>DismissForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorForm1.Designer.cs">
+      <DependentUpon>ErrorForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpendForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExpendForm.Designer.cs">
+      <DependentUpon>ExpendForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinishForm.Designer.cs">
+      <DependentUpon>FinishForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontLogisticForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontLogisticForm.Designer.cs">
+      <DependentUpon>FrontLogisticForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertClerkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertClerkForm.Designer.cs">
+      <DependentUpon>InsertClerkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertDishForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertDishForm.Designer.cs">
+      <DependentUpon>InsertDishForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertFacilityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertFacilityForm.Designer.cs">
+      <DependentUpon>InsertFacilityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertReportForm.Designer.cs">
+      <DependentUpon>InsertReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KitchenLogisticForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitchenLogisticForm.Designer.cs">
+      <DependentUpon>KitchenLogisticForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForm.Designer.cs">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewCardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewCardForm.Designer.cs">
+      <DependentUpon>NewCardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewDishForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewDishForm.Designer.cs">
+      <DependentUpon>NewDishForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenForm.Designer.cs">
+      <DependentUpon>OpenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayForm.Designer.cs">
+      <DependentUpon>PayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymethodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymethodForm.Designer.cs">
+      <DependentUpon>PaymethodForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectClerkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectClerkForm.Designer.cs">
+      <DependentUpon>SelectClerkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffForm.Designer.cs">
+      <DependentUpon>StaffForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StateDishForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StateDishForm.Designer.cs">
+      <DependentUpon>StateDishForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCardForm.Designer.cs">
+      <DependentUpon>UpdateCardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCleaningForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCleaningForm.Designer.cs">
+      <DependentUpon>UpdateCleaningForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateClerkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateClerkForm.Designer.cs">
+      <DependentUpon>UpdateClerkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateDishForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateDishForm.Designer.cs">
+      <DependentUpon>UpdateDishForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateFacilityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateFacilityForm.Designer.cs">
+      <DependentUpon>UpdateFacilityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateMaterialForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateMaterialForm.Designer.cs">
+      <DependentUpon>UpdateMaterialForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddMaterialForm.resx">
+      <DependentUpon>AddMaterialForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceForm.resx">
+      <DependentUpon>AttendanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CasherForm.resx">
+      <DependentUpon>CasherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClerkForm.resx">
+      <DependentUpon>ClerkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CookForm.resx">
+      <DependentUpon>CookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DelDishForm.resx">
+      <DependentUpon>DelDishForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteCardForm.resx">
+      <DependentUpon>DeleteCardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteDishForm.resx">
+      <DependentUpon>DeleteDishForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteFacilityForm.resx">
+      <DependentUpon>DeleteFacilityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteMaterialForm.resx">
+      <DependentUpon>DeleteMaterialForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteReportForm.resx">
+      <DependentUpon>DeleteReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailedDishForm.resx">
+      <DependentUpon>DetailedDishForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DishForm.resx">
+      <DependentUpon>DishForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DismissForm.resx">
+      <DependentUpon>DismissForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorForm1.resx">
+      <DependentUpon>ErrorForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpendForm.resx">
+      <DependentUpon>ExpendForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishForm.resx">
+      <DependentUpon>FinishForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontLogisticForm.resx">
+      <DependentUpon>FrontLogisticForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertClerkForm.resx">
+      <DependentUpon>InsertClerkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertDishForm.resx">
+      <DependentUpon>InsertDishForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertFacilityForm.resx">
+      <DependentUpon>InsertFacilityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertReportForm.resx">
+      <DependentUpon>InsertReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KitchenLogisticForm.resx">
+      <DependentUpon>KitchenLogisticForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForm.resx">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewCardForm.resx">
+      <DependentUpon>NewCardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewDishForm.resx">
+      <DependentUpon>NewDishForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenForm.resx">
+      <DependentUpon>OpenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayForm.resx">
+      <DependentUpon>PayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymethodForm.resx">
+      <DependentUpon>PaymethodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SelectClerkForm.resx">
+      <DependentUpon>SelectClerkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffForm.resx">
+      <DependentUpon>StaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StateDishForm.resx">
+      <DependentUpon>StateDishForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCardForm.resx">
+      <DependentUpon>UpdateCardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCleaningForm.resx">
+      <DependentUpon>UpdateCleaningForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateClerkForm.resx">
+      <DependentUpon>UpdateClerkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateDishForm.resx">
+      <DependentUpon>UpdateDishForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateFacilityForm.resx">
+      <DependentUpon>UpdateFacilityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateMaterialForm.resx">
+      <DependentUpon>UpdateMaterialForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
